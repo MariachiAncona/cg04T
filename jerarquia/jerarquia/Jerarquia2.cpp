@@ -29,6 +29,9 @@ float vini = 9.0;
 float g = 9.81;
 float ang_ini = 45;
 bool inicia_tiro = false;
+bool giro_reloj = false;
+bool p_giro = false, p_giro2 = false, g_animacion = false;
+float gr = 0;
 
 
 float rot = 180.0f, movX = 0, mX = 0, mZ = 0, rot2 = 0,
@@ -775,15 +778,21 @@ void reloj()
 		flecha(i);
 	}
 
+	glRotatef(gr,0,1,0);
+	glTranslatef(0,0.31,0);
+
 	glPushMatrix();
-	//glTranslatef(0, 0, 0.1);
-	glRotatef(90, 0, 0, 1);
+	
+	glRotatef(90,0,0,1);
+	//glTranslatef(0, 0, -2);
 	creloj.cono(2.4, 0.1, 15, hoja.GLindex);
-	glPushMatrix();
-	//glTranslatef(0, 0, 0.2);
-	glRotatef(90, 1, 0, 0);
-	creloj.cono(1.9, 0.1, 15, hoja.GLindex);
 	glPopMatrix();
+	
+	glPushMatrix();
+	glRotatef(90,1,0,0);
+	//glTranslatef(0, 0, 2);
+	creloj.cono(1.9, 0.1, 15, hoja.GLindex);
+	
 	glPopMatrix();
 
 }
@@ -888,7 +897,7 @@ void cuartoA() {
 
 	glPushMatrix();//poster
 	glTranslatef(-13.5, 28, -10);
-	glRotatef(270, 0, 1, 0);
+	glRotatef(90, 0, 1, 0);
 	reloj();
 	glPopMatrix();
 	/////////////////////////////////////////////////////////
@@ -1216,7 +1225,27 @@ void display ( void )   // Creamos la funcion donde se dibuja
 
 void animacion()
 {
-	
+	if (g_animacion) {
+
+			if (p_giro) {
+				gr++;
+				if (gr > 265) {
+					p_giro = false;
+					gr = 265;
+				}
+			}
+
+			if (p_giro2) {
+
+				gr--;//= 1;
+				if (gr < 1) {
+					p_giro2 = false;
+					gr = 2;
+				}
+			}
+
+		
+	}
 		
 // pelota
 	if (inicia_tiro) {
@@ -1323,6 +1352,14 @@ void keyboard ( unsigned char key, int x, int y )  // Create Keyboard Function
 		case 'm':
 		case 'M':
 			inicia_tiro = !inicia_tiro;
+
+		case 'h':
+			p_giro ^= true;
+			g_animacion = true;
+			break;
+		case 'H':
+			p_giro2 ^= true;
+			g_animacion = true;
 		
 		break;
 				

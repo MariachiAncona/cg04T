@@ -1,0 +1,23 @@
+﻿Jerarquia2.obj : error LNK2019: unresolved external symbol __imp___glutInitWithExit referenced in function glutInit_ATEXIT_HACK
+Jerarquia2.obj : error LNK2019: unresolved external symbol __imp_glutInitDisplayMode referenced in function main
+Jerarquia2.obj : error LNK2019: unresolved external symbol __imp_glutInitWindowPosition referenced in function main
+Jerarquia2.obj : error LNK2019: unresolved external symbol __imp_glutInitWindowSize referenced in function main
+Jerarquia2.obj : error LNK2019: unresolved external symbol __imp_glutMainLoop referenced in function main
+Jerarquia2.obj : error LNK2019: unresolved external symbol __imp___glutCreateWindowWithExit referenced in function glutCreateWindow_ATEXIT_HACK
+Jerarquia2.obj : error LNK2019: unresolved external symbol __imp_glutPostRedisplay referenced in function "void __cdecl animacion(void)" (?animacion@@YAXXZ)
+Jerarquia2.obj : error LNK2019: unresolved external symbol __imp_glutSwapBuffers referenced in function "void __cdecl display(void)" (?display@@YAXXZ)
+Jerarquia2.obj : error LNK2019: unresolved external symbol __imp_glutDisplayFunc referenced in function main
+Jerarquia2.obj : error LNK2019: unresolved external symbol __imp_glutReshapeFunc referenced in function main
+Jerarquia2.obj : error LNK2019: unresolved external symbol __imp_glutKeyboardFunc referenced in function main
+Jerarquia2.obj : error LNK2019: unresolved external symbol __imp_glutIdleFunc referenced in function main
+Jerarquia2.obj : error LNK2019: unresolved external symbol __imp_glutSpecialFunc referenced in function main
+Jerarquia2.obj : error LNK2019: unresolved external symbol "public: __cdecl CModel::CModel(void)" (??0CModel@@QEAA@XZ) referenced in function "void __cdecl `dynamic initializer for 'audifonos''(void)" (??__Eaudifonos@@YAXXZ)
+Jerarquia2.obj : error LNK2019: unresolved external symbol "public: __cdecl CModel::~CModel(void)" (??1CModel@@QEAA@XZ) referenced in function "void __cdecl `dynamic atexit destructor for 'audifonos''(void)" (??__Faudifonos@@YAXXZ)
+Jerarquia2.obj : error LNK2019: unresolved external symbol "public: bool __cdecl CModel::_3dsLoad(char *)" (?_3dsLoad@CModel@@QEAA_NPEAD@Z) referenced in function "void __cdecl InitGL(void)" (?InitGL@@YAXXZ)
+Jerarquia2.obj : error LNK2019: unresolved external symbol "public: bool __cdecl CModel::LoadTextureImages(void)" (?LoadTextureImages@CModel@@QEAA_NXZ) referenced in function "void __cdecl InitGL(void)" (?InitGL@@YAXXZ)
+Jerarquia2.obj : error LNK2019: unresolved external symbol "public: void __cdecl CModel::ReleaseTextureImages(void)" (?ReleaseTextureImages@CModel@@QEAAXXZ) referenced in function "void __cdecl InitGL(void)" (?InitGL@@YAXXZ)
+Jerarquia2.obj : error LNK2019: unresolved external symbol "public: void __cdecl CModel::GLIniTextures(void)" (?GLIniTextures@CModel@@QEAAXXZ) referenced in function "void __cdecl InitGL(void)" (?InitGL@@YAXXZ)
+Jerarquia2.obj : error LNK2019: unresolved external symbol "public: void __cdecl CModel::GLrender(class VECTOR3D *,int,float)" (?GLrender@CModel@@QEAAXPEAVVECTOR3D@@HM@Z) referenced in function "void __cdecl cuarto1(void)" (?cuarto1@@YAXXZ)
+cmodel/CModel.lib : warning LNK4272: library machine type 'X86' conflicts with target machine type 'x64'
+glut32.lib : warning LNK4272: library machine type 'X86' conflicts with target machine type 'x64'
+C:\Users\Marco\Desktop\Proyecto Final Teoria\ProyectoFinalCG\jerarquia\x64\Debug\jerarquia.exe : fatal error LNK1120: 20 unresolved externals
